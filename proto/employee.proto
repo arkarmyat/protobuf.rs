@@ -1,0 +1,17 @@
+syntax = "proto3";
+package employee;
+
+service Employee {
+    rpc GetEmployee(EmployeeRequest) returns (EmployeeResponse); 
+}
+
+message EmployeeRequest {
+  string id = 1;
+}
+
+message EmployeeResponse {
+  string id = 1;
+  string name = 2;
+}
+
+
